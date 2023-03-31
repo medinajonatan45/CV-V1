@@ -1,0 +1,346 @@
+/**************** Body *****************/
+body{
+    background-image: url(../img/backgrounds/fondo1.png);
+    /* padding:20px 90px; */
+    /* padding: 2% 5% 2% 0px; */
+    /* background-size:cover; */
+    background-color: rgb(34, 37, 65);
+    animation-name: colores;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin: 0;
+    font-family:Helvetica;
+}
+
+@media(max-width:990px) {
+    .main{
+        padding: 2% 5%;
+    }
+    
+}
+/* Animacion fondo cambio de colores */
+@keyframes colores{
+    0%{background-color: rgb(34, 37, 65);}
+    25%{background-color: rgb(79, 35, 51);}
+    50%{background-color: rgb(40, 77, 59);}
+    75%{background-color: rgb(82, 64, 22);}
+    /* 100%{background-color: rgb(65, 34, 34);} */
+    
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+h5{
+    font-size: 19px;
+    margin-bottom:-10px;
+}
+/**************** Nav menu *************/
+/* Estilo Menu-Escritorio fijo */
+.nav_menu{
+    position:fixed;
+    /* Se le da un width y height porque al ser fixed, se mezcla con las 
+    propiedades de grid */
+    width: 13%;
+    height: 100%;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    text-align: left;
+    box-shadow: 5px 0px 20px rgb(20, 20, 20);
+}
+/* Animacion desplazamiento de anclajes nav */
+*{
+    scroll-behavior: smooth;
+}
+.nav_menu:hover{
+    /* box-shadow: width height  degradado */
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.8s ease-in;
+}
+.nav_menu a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+/* Animacion color de las secciones del menu de tipo "<a>" */
+@keyframes color_a_menu{
+    0%{color: rgb(96, 112, 255);}
+    25%{color: rgb(255, 88, 88);}
+    50%{color: rgb(58, 252, 161);}
+    75%{color: rgb(248, 236, 66);}
+    100%{color: rgb(250, 48, 199);}
+
+}
+
+/* Animacion de los "botones" del menu */
+.nav_menu a:hover{
+    animation-name: color_a_menu, pulse;
+    animation-duration: 5s, 0.9s;
+    animation-iteration-count: infinite, initial;
+    /* animation: heartBeat; referring directly to the animation's @keyframe declaration */
+    /* animation-duration: 2s; don't forget to set a duration! */
+}
+
+/* Estilo de la imagen-logo JR */
+.nav_menu .logo_JR{
+    background-color: rgb(15, 15, 15);
+    padding-left: 10%;
+    text-align: center;
+}
+.logo_JR p{
+    margin: 0;
+}
+.nav_menu .logo_JR:hover{
+    /* animation: heartBeat; */
+    animation: rubberBand;
+    animation-duration: 1s;
+}
+
+/* Estilo boton imprimir CV */
+.nav_menu #download_cv{
+    text-align: center;
+    padding: 10px 0 10px 0;
+    color:rgb(10, 245, 167);
+    border: 2px solid rgb(10, 245, 167);
+}
+.nav_menu #download_cv:hover{
+    color:rgb(24, 24, 24);
+    animation: none;
+    background-color:rgb(10, 245, 167);
+}
+
+/**************** Seccion 1 *************/
+.seccion_1{
+    background-color: rgb(24, 24, 24);
+    padding: 70px 35px;
+    color: white;
+    box-shadow: 5px 0px 20px 2px rgb(20, 20, 20);
+}
+/* Estilo sombra seccion 1 */
+.seccion_1:hover{
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.6s ease-in;
+}
+.seccion_1_1{
+    text-align: center;
+}
+/* Estilo y animacion de etiqueta H1 del Nombre seccion 1 */
+.seccion_1_1 h1:hover{
+    text-decoration-color: rgb(153, 153, 153);
+    transition: all 0.9s ease-in;
+    animation-name: rubberBand;
+    animation-duration: 1s;
+}
+
+.seccion_1_2 .img_contact{
+    text-align: justify;
+    margin-bottom: 50px;
+}
+.seccion_1_3 .img_contact .link_social{
+    color: rgb(255, 253, 129);
+    text-decoration: none;
+}
+.seccion_1_3 .img_contact .link_social:hover{
+    color: rgb(252, 191, 191);
+    text-decoration: underline;
+}
+.img_contact_1, .img_contact_2, .img_contact_3{
+    margin-left: 0;
+    display: block;
+}
+.img_contact img{
+    vertical-align: middle;
+    margin: 0 5px;
+    /* background-color: red; */
+}
+/* Estilo para crear la linea blanca separadora en seccion 1 */
+.line_1{
+    content: " ";
+    border-bottom: 2px solid white;
+    margin-top: 15px;
+}
+.seccion_1_1 #img_fotografia:hover{
+    animation: pulse;
+    animation-duration: 2s;
+}
+
+.link_projects{
+    font-size: 14px;
+    color: rgb(152, 248, 248);
+    text-decoration: none;
+}
+.link_projects:hover{
+    color: rgb(253, 141, 225);
+}
+#title_name{
+    margin-bottom: 0;
+}
+#title_animate{
+    margin-bottom: 6px;
+}
+#Caja_1{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 100px;
+    height: 2px;
+}
+
+
+/***************** Seccion 2 *************/
+.seccion_2{
+    color: white;
+    background-color: rgba(24, 24, 24, 0.8);
+}
+.seccion_2 article{
+    color: white;
+    padding: 0 20px 20px;
+    text-align: justify;
+}
+
+/* Estilo y animacion de border-top cajas seccion 2 */
+@keyframes border_color{
+    0%{border-top: 3px solid rgb(79, 247, 130);}
+    25%{border-top: 3px solid rgb(243, 250, 142);}
+    25%{border-top: 3px solid rgb(250, 142, 236);}
+}
+.seccion_2 h2{
+    margin-top: 0;
+    background-color: rgb(24, 24, 24);
+    padding: 20px 70px;
+    border-top: 3px solid rgb(142, 250, 174);
+    animation-name: border_color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+article{
+    line-height: 25px;
+    font-size: 15px;
+}
+/* Sombras cajas seccion 2 */
+.seccion_2_1, .seccion_2_2, .seccion_2_3, .seccion_2_4{
+    box-shadow: 5px 0px 20px rgb(20, 20, 20);
+}
+
+/* Estilo y animacion lenta de background fondo seccion 2 */
+.seccion_2_1:hover{
+    background-color: rgba(90, 90, 90, 0.664);
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.6s ease-in;
+}
+.seccion_2_2:hover{
+    background-color: rgba(90, 90, 90, 0.664);
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.6s ease-in;
+}
+.seccion_2_3:hover{
+    background-color: rgba(90, 90, 90, 0.664);
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.6s ease-in;
+}
+.seccion_2_4:hover{
+    background-color: rgba(90, 90, 90, 0.664);
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.6s ease-in;
+}
+.habilidades_box{
+    text-align: center;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+@media screen and (max-width:900px){
+    .habilidades_box{
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+}
+.habilidades_box_2{
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+.habilidades_box_2 figcaption{
+    padding-top: 5px;
+}
+.habilidades_box_2 img:hover{
+    animation-duration: 1s;
+    animation-name: heartBeat;
+}
+/* Estilos viñetas aptitudes */
+.seccion_2_3 ul li{
+    list-style: none;
+    cursor:default;
+}
+.seccion_2_3 ul li:before{
+    content: '\2713';
+    margin: 0 1em;
+}
+.seccion_2_3 ul li:hover{
+    content: '';
+    margin: 0 1em;
+}
+
+.seccion_2 .diagram{
+    color: white;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+/*************** Responsive Grid CSS **********************/
+.main{
+    display: grid;
+    grid-template-columns: 14% 42% auto;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    grid-template-areas: 'nav seccion_1 seccion_2';
+}
+@media screen and (max-width:990px){
+    .main{
+        grid-template-areas: 'seccion_1 seccion_1 seccion_1'
+                             'seccion_2 seccion_2 seccion_2'
+                             'nav nav nav';
+    }
+    .logo_JR{
+        display: none;
+    }
+    .nav_menu{
+        display: grid;
+        position: relative;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        width: auto;
+        margin: 0;
+    }
+    .nav_menu_options{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:'nav_opt_6';
+    }
+    .nav_opt_1, .nav_opt_2, .nav_opt_3, .nav_opt_4, .nav_opt_5{
+        display: none;
+    }
+    .nav_opt_6{
+        grid-area: nav_opt_6;
+    }
+}
+.nav_menu{
+    grid-area: nav;
+}
+.seccion_1{
+    grid-area: seccion_1;
+}
+.seccion_2{
+    grid-area: seccion_2;
+}
